@@ -1,0 +1,234 @@
+@import "_variables";
+@import "_header";
+@import "_fonts";
+
+body {
+    font-family: $light-family;
+    color: $base-color;
+}
+
+.site-body {
+    padding: 60px 0;
+}
+
+.sa-title {
+    text-transform: capitalize;
+    text-align: center;
+    font-family: $light-family;
+    font-size: 30px;
+
+    em {
+        display: block;
+        font-style: normal;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    background-size: 80%;
+}
+
+.icon-inr::before {
+    background-image: url('../images/inr.png');
+}
+
+.icon-calender::before {
+    background-image: url('../images/calender.png');
+}
+
+.icon-rupee::before {
+    background-image: url('../images/inr-rupee.png');
+}
+
+.sa {
+    &-sch {
+        font-size: 28px;
+        padding: 40px 0;
+    }
+
+    &-sch-dtls {
+        display: flex;
+        text-transform: capitalize;
+        line-height: 1.2;
+
+        .txt2 {
+            display: block;
+            font-size: 10px;
+        }
+    }
+
+    &-card-item {
+        border: 1px solid rgba($base-color, 0.4);
+        text-transform: capitalize;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &+.sa-card-item {
+            margin-top: 10px;
+        }
+
+        .sa {
+            &-funds {
+                display: flex;
+                align-items: center;
+                height: 70px;
+            }
+
+            &-block {
+                flex-basis: 85%;
+                height: 100%;
+                padding: 15px 10px;
+
+            }
+
+            &-inr {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                padding: 0px;
+                height: 100%;
+                color: $white;
+                font-family: $regular-family;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &-fund-name {
+        font-size: 16px;
+    }
+
+    &-holding {
+        font-size: 12px;
+    }
+}
+
+.sa-button {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn-primary-grn {
+    text-transform: capitalize;
+    font-size: 16px;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: 0.3s;
+    box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.3);
+}
+
+.card-hvr {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    &:hover {
+        &:before {
+            opacity: 1;
+        }
+    }
+
+    &.large {
+        &:before {
+            border-right: 3px solid $large-cap;
+        }
+
+        .sa-inr {
+            background-color: $large-cap;
+        }
+    }
+
+    &.mid {
+        &:before {
+            border-right: 3px solid $mid-cap;
+        }
+
+        .sa-inr {
+            background-color: $mid-cap;
+        }
+    }
+
+    &.long {
+        &:before {
+            border-right: 3px solid $long-term;
+        }
+
+        .sa-inr {
+            background-color: $long-term;
+        }
+    }
+}
+
+.note {
+    text-align: right;
+    font-size: 10px;
+    line-height: 1.4;
+    margin: 4px;
+}
+
+.img-box {
+    img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sa {
+        &-card-item {
+            .sa {
+                &-funds {
+                    display: block;
+                    height: auto;
+                }
+
+                &-inr {
+                    padding: 6px;
+                }
+            }
+        }
+
+        &-sch-dtls {
+            margin-bottom: 20px;
+            line-height: 1.5;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &-sch {
+            font-size: 18px;
+        }
+    }
+
+    .radial-info {
+        width: 60%;
+        margin: 0 auto 40px;
+    }
+
+    .sa-title {
+        font-size: 20px;
+    }
+
+    .header-container {
+        padding: 0px;
+        justify-content: center;
+    }
+}

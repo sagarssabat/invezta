@@ -1,0 +1,260 @@
+/*_Color Variables_*/
+/*_Font Variables_*/
+.header-container {
+  height: 70px;
+  background-color: #efefef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.site-logo > a {
+  display: block;
+  width: 150px;
+}
+.site-logo > a img {
+  width: 100%;
+}
+
+.hamburger-menu {
+  width: 60px;
+}
+.hamburger-menu img {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "montserrat-regular";
+  src: url("../fonts/montserrat-regular.eot");
+  src: url("../fonts/montserrat-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-regular.woff2") format("woff2"), url("../fonts/montserrat-regular.woff") format("woff"), url("../fonts/montserrat-regular.ttf") format("truetype"), url("../fonts/montserrat-regular.svg#montserrat-regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FE;
+}
+@font-face {
+  font-family: "montserrat-bold";
+  src: url("../fonts/montserrat-bold.eot");
+  src: url("../fonts/montserrat-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-bold.woff") format("woff"), url("../fonts/montserrat-bold.ttf") format("truetype"), url("../fonts/montserrat-bold.svg#montserrat-bold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FE;
+}
+@font-face {
+  font-family: "montserrat-black";
+  src: url("../fonts/montserrat-black.eot");
+  src: url("../fonts/montserrat-black.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-black.woff2") format("woff2"), url("../fonts/montserrat-black.woff") format("woff"), url("../fonts/montserrat-black.ttf") format("truetype"), url("../fonts/montserrat-black.svg#montserrat-black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FE;
+}
+@font-face {
+  font-family: "montserrat-hairline";
+  src: url("../fonts/montserrat-hairline.eot");
+  src: url("../fonts/montserrat-hairline.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-hairline.woff2") format("woff2"), url("../fonts/montserrat-hairline.woff") format("woff"), url("../fonts/montserrat-hairline.ttf") format("truetype"), url("../fonts/montserrat-hairline.svg#montserrat-hairline") format("svg");
+  font-weight: 250;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FE;
+}
+@font-face {
+  font-family: "montserrat-light";
+  src: url("../fonts/montserrat-light.eot");
+  src: url("../fonts/montserrat-light.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-light.woff2") format("woff2"), url("../fonts/montserrat-light.woff") format("woff"), url("../fonts/montserrat-light.ttf") format("truetype"), url("../fonts/montserrat-light.svg#montserrat-light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FE;
+}
+body {
+  font-family: "montserrat-light";
+  color: #5b5b5b;
+}
+
+.site-body {
+  padding: 60px 0;
+}
+
+.sa-title {
+  text-transform: capitalize;
+  text-align: center;
+  font-family: "montserrat-light";
+  font-size: 30px;
+}
+.sa-title em {
+  display: block;
+  font-style: normal;
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+[class^=icon-]::before,
+[class*=" icon-"]::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  background-size: 80%;
+}
+
+.icon-inr::before {
+  background-image: url("../images/inr.png");
+}
+
+.icon-calender::before {
+  background-image: url("../images/calender.png");
+}
+
+.icon-rupee::before {
+  background-image: url("../images/inr-rupee.png");
+}
+
+.sa-sch {
+  font-size: 28px;
+  padding: 40px 0;
+}
+.sa-sch-dtls {
+  display: flex;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+.sa-sch-dtls .txt2 {
+  display: block;
+  font-size: 10px;
+}
+.sa-card-item {
+  border: 1px solid rgba(91, 91, 91, 0.4);
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.sa-card-item + .sa-card-item {
+  margin-top: 10px;
+}
+.sa-card-item .sa-funds {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+.sa-card-item .sa-block {
+  flex-basis: 85%;
+  height: 100%;
+  padding: 15px 10px;
+}
+.sa-card-item .sa-inr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 0px;
+  height: 100%;
+  color: #ffffff;
+  font-family: "montserrat-regular";
+  font-size: 18px;
+}
+.sa-fund-name {
+  font-size: 16px;
+}
+.sa-holding {
+  font-size: 12px;
+}
+
+.sa-button {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-primary-grn {
+  text-transform: capitalize;
+  font-size: 16px;
+  background-color: #12d6b0;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: 0.3s;
+  box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.3);
+}
+
+.card-hvr {
+  position: relative;
+}
+.card-hvr::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  transition: 0.3s;
+  opacity: 0;
+}
+.card-hvr:hover:before {
+  opacity: 1;
+}
+.card-hvr.large:before {
+  border-right: 3px solid #14a388;
+}
+.card-hvr.large .sa-inr {
+  background-color: #14a388;
+}
+.card-hvr.mid:before {
+  border-right: 3px solid #13bc9c;
+}
+.card-hvr.mid .sa-inr {
+  background-color: #13bc9c;
+}
+.card-hvr.long:before {
+  border-right: 3px solid #425b77;
+}
+.card-hvr.long .sa-inr {
+  background-color: #425b77;
+}
+
+.note {
+  text-align: right;
+  font-size: 10px;
+  line-height: 1.4;
+  margin: 4px;
+}
+
+.img-box img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sa-card-item .sa-funds {
+    display: block;
+    height: auto;
+  }
+  .sa-card-item .sa-inr {
+    padding: 6px;
+  }
+  .sa-sch-dtls {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .sa-sch-dtls::before {
+    display: none;
+  }
+  .sa-sch {
+    font-size: 18px;
+  }
+
+  .radial-info {
+    width: 60%;
+    margin: 0 auto 40px;
+  }
+
+  .sa-title {
+    font-size: 20px;
+  }
+
+  .header-container {
+    padding: 0px;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

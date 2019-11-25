@@ -55,6 +55,7 @@ body {
 
     &-sch-dtls {
         display: flex;
+        justify-content: center;
         text-transform: capitalize;
         line-height: 1.2;
 
@@ -207,6 +208,7 @@ body {
         &-sch-dtls {
             margin-bottom: 20px;
             line-height: 1.5;
+            justify-content: flex-start;
 
             &::before {
                 display: none;
